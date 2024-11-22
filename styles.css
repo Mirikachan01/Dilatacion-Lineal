@@ -177,3 +177,89 @@ p {
     font-size: 1rem;            /* Tamaño de fuente para los párrafos */
     margin-bottom: 15px;        /* Espacio debajo del párrafo */
 }
+
+
+
+
+
+
+/* Contenedor principal para el grid */
+.grid-container {
+    display: grid;              /* Usamos Grid Layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+    gap: 20px;                  /* Espacio entre los elementos */
+    margin: 20px;
+}
+
+/* Elementos de la grid */
+.grid-item {
+    background-color: #f2f2f2; /* Fondo claro para cada item */
+    padding: 20px;              /* Espaciado interno */
+    text-align: center;         /* Centrar el texto */
+    border-radius: 8px;         /* Bordes redondeados */
+}
+
+.grid-item img {
+    width: 100%;                /* Aseguramos que la imagen ocupe todo el contenedor */
+    max-width: 300px;           /* Ancho máximo de la imagen */
+    height: auto;               /* Mantener la relación de aspecto */
+    margin-top: 10px;
+}
+
+/* Para el último item, centrado */
+.centered {
+    grid-column: span 2;        /* El item ocupa 2 columnas (1x1 en centro) */
+    text-align: center;         /* Centrado del texto y la imagen */
+}
+
+h2 {
+    color: #333;                /* Color para los subtítulos */
+    font-size: 1.5rem;          /* Tamaño de fuente para subtítulos */
+    margin-bottom: 10px;        /* Espacio debajo del subtítulo */
+}
+
+p {
+    color: #666;                /* Color para los párrafos */
+    font-size: 1rem;            /* Tamaño de fuente para los párrafos */
+    margin-bottom: 15px;        /* Espacio debajo del párrafo */
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    .grid-container {
+        grid-template-columns: 1fr;  /* 1 columna en pantallas pequeñas */
+        gap: 10px;                  /* Espacio reducido entre los elementos */
+    }
+
+    .grid-item {
+        padding: 10px;              /* Reducir el padding en pantallas pequeñas */
+    }
+
+    h2 {
+        font-size: 1.2rem;          /* Reducir el tamaño de los subtítulos en móviles */
+    }
+
+    p {
+        font-size: 0.9rem;          /* Reducir el tamaño de los párrafos en móviles */
+    }
+}
+
+/* Media Query para pantallas de tabletas */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+        gap: 15px;
+    }
+
+    .grid-item {
+        padding: 15px;              /* Aumentar el padding en tabletas */
+    }
+
+    h2 {
+        font-size: 1.4rem;          /* Ajuste en tamaño de subtítulo */
+    }
+
+    p {
+        font-size: 1rem;            /* Ajuste en tamaño de párrafos */
+    }
+}
