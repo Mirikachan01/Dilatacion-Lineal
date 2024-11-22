@@ -1,0 +1,179 @@
+/* Estilo General */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fffdfd;
+    color: #333;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Barra de Navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    color: #fff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+}
+
+.buttons .btn {
+    margin-left: 10px;
+    background: #ff6347;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+.buttons .btn:hover {
+    background: #ff4500;
+}
+
+/* Títulos Animados */
+.animated-title, .animated-subtitle {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.animated-title {
+    font-size: 2.5rem;
+    color: #111;
+}
+
+.animated-subtitle {
+    font-size: 2rem;
+    color: #555;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Secciones */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Pie de página */
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Botón circular estático */
+#static-back-to-top {
+    position: fixed; /* Fijo en la pantalla */
+    bottom: 20px;    /* Separado de la parte inferior */
+    right: 20px;     /* Separado del lado derecho */
+    width: 50px;     /* Ancho */
+    height: 50px;    /* Alto */
+    background-color: #ff6347; /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 50%; /* Hacerlo circular */
+    display: flex; /* Centrar el texto dentro del botón */
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+    cursor: pointer; /* Manito al pasar el mouse */
+    z-index: 1000; /* Asegurarse de que esté por encima del contenido */
+    transition: background-color 0.3s ease;
+}
+
+/* Cambiar color al pasar el cursor */
+#static-back-to-top:hover {
+    background-color: #ff4500;
+}
+
+
+
+
+
+/* Contenedor principal para el grid */
+.grid-container {
+    display: grid;             /* Usamos Grid Layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+    gap: 20px;                 /* Espacio entre los elementos */
+    margin: 20px;
+}
+
+/* Elementos de la grid */
+.grid-item {
+    background-color: #f2f2f2; /* Fondo claro para cada item */
+    padding: 20px;              /* Espaciado interno */
+    text-align: center;         /* Centrar el texto */
+    border-radius: 8px;         /* Bordes redondeados */
+}
+
+.grid-item img {
+    width: 100%;                /* Aseguramos que la imagen ocupe todo el contenedor */
+    max-width: 300px;           /* Ancho máximo de la imagen */
+    height: auto;               /* Mantener la relación de aspecto */
+    margin-top: 10px;
+}
+
+/* Para el último item, centrado */
+.centered {
+    grid-column: span 2;        /* El item ocupa 2 columnas (1x1 en centro) */
+    text-align: center;         /* Centrado del texto y la imagen */
+}
+
+h2 {
+    color: #333;                /* Color para los subtítulos */
+    font-size: 1.5rem;          /* Tamaño de fuente para subtítulos */
+    margin-bottom: 10px;        /* Espacio debajo del subtítulo */
+}
+
+p {
+    color: #666;                /* Color para los párrafos */
+    font-size: 1rem;            /* Tamaño de fuente para los párrafos */
+    margin-bottom: 15px;        /* Espacio debajo del párrafo */
+}
